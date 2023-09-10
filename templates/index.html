@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto-updating Image</title>
+</head>
+<body>
+  <img id="cameraImage" src="/get_image">
+  <script>
+    function updateImage() {
+      let d = new Date();
+      document.getElementById("cameraImage").src = "/get_image?" + d.getTime();
+    }
+    setInterval(updateImage, 5000);
+  </script>
+</body>
+</html>
